@@ -1,0 +1,44 @@
+<!--
+  Generated template for the OrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="img">
+  <ion-list>
+      <img src="./assets/imgs/smoke.png"/>
+    <ion-item class="p" padding>
+      <ion-label>WHIPPED CREAM</ion-label>
+      <ion-checkbox [(ngModel)]="whippedcream"></ion-checkbox>
+    </ion-item>
+  
+    <ion-item class="p" padding>
+      <ion-label>CHOCOLATE</ion-label>
+      <ion-checkbox [(ngModel)]="chocolate"></ion-checkbox>
+    </ion-item>
+  
+    <ion-item class="p" padding>
+      <ion-label>LATTE ART</ion-label>
+      <ion-checkbox [(ngModel)]=" latteart"></ion-checkbox>
+    </ion-item>
+  
+  </ion-list>
+  <ion-item class="e" padding>
+ <h1>Quantity:</h1><ion-col col-6><button ion-button color="light" (click)="Quantity(+1)">+1</button></ion-col>
+ <ion-col col-6><button ion-button color="light" (click)="Quantity(-1)">-1</button></ion-col><h2>{{counter}}</h2>
+</ion-item>
+<button ion-button round outline (click)="purchase()">COST</button>
+<ion-item >
+  <h1>Price<br>R{{netprice}}</h1>
+</ion-item>
+
+</ion-content>
